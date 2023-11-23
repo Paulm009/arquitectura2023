@@ -16,6 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { CarruselComponent } from './carrusel/carrusel.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { InformacionComponent } from './informacion/informacion.component';
+import { DonacionComponent } from './donacion/donacion.component';
 registerLocaleData(en);
 
 
@@ -23,6 +27,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     CarruselComponent,
+    FooterComponent,
+    HeaderComponent,
+    InformacionComponent,
+    DonacionComponent,
     
     
    
