@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrusel.component.css']
 })
 export class CarruselComponent {
+
+  
+
 sliderImagenes = [
   "/assets/sliderimagens/ima1.jpg",
   "/assets/sliderimagens/ima2.jpg",
