@@ -20,6 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { DonacionComponent } from './donacion/donacion.component';
+import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
+import { BibliotecaVideosComponent } from './biblioteca-videos/biblioteca-videos.component';
 registerLocaleData(en);
 
 
@@ -31,6 +33,8 @@ registerLocaleData(en);
     HeaderComponent,
     InformacionComponent,
     DonacionComponent,
+    ListaPlantasComponent,
+    BibliotecaVideosComponent,
     
     
    
