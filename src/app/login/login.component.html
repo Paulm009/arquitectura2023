@@ -1,0 +1,24 @@
+<div class="background"></div>
+<section class="home">
+  <div class="content">
+    <a href="/carrusel" class="logo"><i class="fa-solid fa-spider"></i>JARDIN BOTANICO</a>
+    <h2>Bienvenido Admin!</h2>
+    <h3>Administra el Jardin Botanico</h3>
+  </div>
+  <div class="login">
+    <h2>Inicio</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input">
+        <input type="text" formControlName="username" class="input1" placeholder="Usuario" required>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="input">
+        <input type="password" formControlName="password" class="input1" placeholder="Contraseña" required>
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn">Iniciar</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { InformacionComponent } from './informacion/informacion.component';
 import { DonacionComponent } from './donacion/donacion.component';
 import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
 import { BibliotecaVideosComponent } from './biblioteca-videos/biblioteca-videos.component';
+import { LoginComponent } from './login/login.component';
 registerLocaleData(en);
 
 
@@ -35,6 +37,7 @@ registerLocaleData(en);
     DonacionComponent,
     ListaPlantasComponent,
     BibliotecaVideosComponent,
+    LoginComponent,
     
     
    
@@ -48,7 +51,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzCarouselModule,
-    NzCardModule
+    NzCardModule,
+    ReactiveFormsModule
    
   ],
   providers: [
