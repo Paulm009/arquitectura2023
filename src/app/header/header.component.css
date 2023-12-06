@@ -31,8 +31,35 @@
     color:#ffcc00;
 }
 
-.search i {
+.search a {
     color: #fff;
     font-size: 1.5em;
     margin-left: 20px;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .header {
+        /* Tu código existente... */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .nav a {
+        margin: 10px 0;
+    }
+
+    .search {
+        margin-left: auto;
+    }
+
+    .search a {
+        margin-left: 120px;
+    }
 }
