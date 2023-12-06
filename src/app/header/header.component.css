@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background-color: black;
 }
 
 .header {
@@ -26,9 +25,10 @@
     font-weight: 600;
 }
 
-.header .a:hover {
-    border-bottom: 4px solid #fff;
+.header .nav a:hover {
+    border-bottom: 4px solid #ffcc00;;
     transition: .5s;
+    color:#ffcc00;
 }
 
 .search i {
