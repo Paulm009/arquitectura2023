@@ -8,10 +8,13 @@ import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.co
 import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
 import { DonacionComponent } from './donacion/donacion.component';
 import { LoginHomepageComponent } from './login-homepage/login-homepage.component';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriaDetallesComponent } from './categoria-detalles/categoria-detalles.component';
+
 
 const routes: Routes = [
   { path: "", component: LoginHomepageComponent },
-
+  { path: 'categoria/:id', component: CategoriaDetallesComponent },
   { path: "carrusel", component: CarruselComponent },
   { path: "login", component: LoginComponent },
   { path: "header", component: HeaderComponent },
@@ -19,7 +22,8 @@ const routes: Routes = [
   { path: "listaCategoria", component: ListaCategoriasComponent },
   { path: "listaPlanta", component: ListaPlantasComponent },
   { path: "donacion", component: DonacionComponent },
-  
+   { path: 'categorias', component: CategoriasComponent },
+  { path: 'categoria/:id', component: CategoriaDetallesComponent },
 
 
 
