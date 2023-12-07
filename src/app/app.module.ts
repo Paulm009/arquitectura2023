@@ -25,6 +25,7 @@ import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
 import { BibliotecaVideosComponent } from './biblioteca-videos/biblioteca-videos.component';
 import { LoginComponent } from './login/login.component';
 import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
+import { LoginHomepageComponent } from './login-homepage/login-homepage.component';
 registerLocaleData(en);
 
 
@@ -40,6 +41,7 @@ registerLocaleData(en);
     BibliotecaVideosComponent,
     LoginComponent,
     ListaCategoriasComponent,
+    LoginHomepageComponent,
     
     
    

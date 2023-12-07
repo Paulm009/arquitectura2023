@@ -25,11 +25,10 @@ describe('CarruselComponent', () => {
     expect(component.sliderImagenes).toBeDefined();
     expect(component.sliderImagenes.length).toBeGreaterThan(0);
   });
-  
 
   it('deberia mostrar imágenes como swiper-slide', () => {
     const compiled = fixture.nativeElement;
-    const images = compiled.querySelectorAll('img');
+    const images = compiled.querySelectorAll('.swiper-slide img'); // Seleccionar las imágenes dentro de swiper-slide
 
     expect(images.length).toBe(component.sliderImagenes.length);
 
@@ -55,9 +54,23 @@ describe('CarruselComponent', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement;
-    const images = compiled.querySelectorAll('img');
+    const images = compiled.querySelectorAll('.swiper-slide img');
     const lastImage = images[images.length - 1] as HTMLImageElement;
 
     expect(lastImage.src).toContain(newImageUrl);
+  });
+
+  it('debería tener un título y texto para cada imagen', () => {
+    const compiled = fixture.nativeElement;
+    const cardTitles = compiled.querySelectorAll('.card-title');
+    const cardTexts = compiled.querySelectorAll('.card-text');
+
+    expect(cardTitles.length).toBe(component.sliderImagenes.length);
+    expect(cardTexts.length).toBe(component.sliderImagenes.length);
+
+    for (let i = 0; i < component.sliderImagenes.length; i++) {
+      expect(cardTitles[i].textContent).toContain('TIRAMISU CAKE');
+      expect(cardTexts[i].textContent).toContain('Lorem ipsum');
+    }
   });
 });

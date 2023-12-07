@@ -15,23 +15,47 @@ describe('InformacionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('deberia mostrar el título y la descripción', () => {
-    expect(fixture.nativeElement.querySelector('.info-title').textContent).toContain('');
-    expect(fixture.nativeElement.querySelector('.info-description').textContent).toContain('');
+  it('deberia crear el componente', () => {
+    expect(component).toBeTruthy();
   });
 
-  it('deberia mostrar una imagen o icono', () => {
+  it('deberia mostrar el título y la descripción cuando se proporcionan', () => {
+    fixture.detectChanges();
+
+    const titleElement = fixture.nativeElement.querySelector('.info-title');
+    const descriptionElement = fixture.nativeElement.querySelector('.info-description');
+
+    expect(titleElement.textContent).toContain('Título de prueba');
+    expect(descriptionElement.textContent).toContain('Descripción de prueba');
+  });
+
+  it('deberia mostrar una imagen o icono si se proporciona una URL válida', () => {
     const imgElement = fixture.nativeElement.querySelector('.info-image');
     expect(imgElement).toBeTruthy();
   });
 
-  it('deberia accionar un evento cuando se hace clic en un botón', () => {
-    const mockFunction = jasmine.createSpy('mockFunction');
-    expect(mockFunction).toHaveBeenCalled();
+  it('deberia ocultar la imagen si no se proporciona una URL válida', () => {
+    expect(true).toBeFalsy();
   });
 
-  it('deberia mostrar contenido adicional cuando una propiedad es verdadera', () => {
-    const additionalContent = fixture.nativeElement.querySelector('.additional-info');
-    expect(additionalContent).toBeTruthy();
+  it('deberia accionar un evento cuando se hace clic en un botón', () => {
+    const buttonElement = fixture.nativeElement.querySelector('.info-button');
+    expect(true).toBeFalsy();
+  });
+
+  it('deberia ocultar el contenido adicional si la propiedad es falsa', () => {
+    expect(true).toBeFalsy();
+  });
+
+  it('deberia mostrar el contenido adicional si la propiedad es verdadera', () => {
+    expect(false).toBeTruthy();
+  });
+
+  it('deberia cambiar el estilo de la descripción cuando hay más contenido', () => {
+    expect(true).toBeFalsy();
+  });
+
+  it('deberia mostrar un mensaje cuando no hay contenido adicional', () => {
+    expect(false).toBeTruthy();
   });
 });

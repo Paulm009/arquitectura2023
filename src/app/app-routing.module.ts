@@ -7,8 +7,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
 import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
 import { DonacionComponent } from './donacion/donacion.component';
+import { LoginHomepageComponent } from './login-homepage/login-homepage.component';
 
 const routes: Routes = [
+  { path: "", component: LoginHomepageComponent },
+
   { path: "carrusel", component: CarruselComponent },
   { path: "login", component: LoginComponent },
   { path: "header", component: HeaderComponent },
