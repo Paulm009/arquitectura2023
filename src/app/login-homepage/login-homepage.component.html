@@ -50,6 +50,12 @@
             <img mat-card-image [src]="card.image" alt="Card image">
             
               <p>{{ card.content }}</p>
+
+              <mat-card-actions>
+                <button mat-button (click)="openUrl(card.url)">Ir a Sitio</button>
+              </mat-card-actions>
+
+
           </mat-card>
         </div>
       
