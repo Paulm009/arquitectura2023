@@ -1,113 +1,112 @@
 .login-homepage-carousel {
-    position: relative;
-  }
-  
-  .cards-container {
+  position: relative;
+}
 
- width: 1700px;
-    height: 500px;
-    margin: auto;
-    overflow: hidden;
+.cards-container {
+
+width: 1700px;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
 
 
-    display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    
-    padding: 0 40px; /* Espacio para los botones de navegación */
-  }
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
   
-  .carousel-card {
-    flex: 0 0 auto;
-    width: 500px; /* Ajusta según el tamaño de tus tarjetas */
-    margin-right: 36px;
-    scroll-snap-align: start;
-  }
-  
-  .scroll-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #eee; /* Ajusta el color según tu diseño */
-    border: none;
-    cursor: pointer;
-    z-index: 10; /* Asegúrate de que esté por encima de las tarjetas */
-    width: 30px; /* Ajusta el tamaño según sea necesario */
-    height: 30px; /* Ajusta el tamaño según sea necesario */
-    border-radius: 15px; /* Opcional para botones redondos */
-  }
-  
-  .left {
-    left: 10px;
-  }
-  
-  .right {
-    right: 10px;
-  }
-  
-  .carousel {
-    position: relative;
-    width: 1600px;
-    height: 800px;
-    margin: auto;
-    overflow: hidden;
+  padding: 0 40px; /* Espacio para los botones de navegación */
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 500px; /* Ajusta según el tamaño de tus tarjetas */
+  margin-right: 36px;
+  scroll-snap-align: start;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #eee; /* Ajusta el color según tu diseño */
+  border: none;
+  cursor: pointer;
+  z-index: 10; /* Asegúrate de que esté por encima de las tarjetas */
+  width: 30px; /* Ajusta el tamaño según sea necesario */
+  height: 30px; /* Ajusta el tamaño según sea necesario */
+  border-radius: 15px; /* Opcional para botones redondos */
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 1600px;
+  height: 800px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .carousel input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 .slides {
-    width: 300%; /* 3 slides * 100% */
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease;
+  width: 300%; /* 3 slides * 100% */
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .slide {
-    width: 33.333%; /* 100% / 3 slides */
-    flex-shrink: 0;
-    overflow: hidden;
+  width: 33.333%; /* 100% / 3 slides */
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .navigation {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
 }
 
 .navigation label {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    border-radius: 50%;
-    background: #fff;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
 }
 
 /* Slide control */
 #slide1:checked ~ .slides .slide {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 #slide2:checked ~ .slides .slide {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 #slide3:checked ~ .slides .slide {
-    transform: translateX(-200%);
+  transform: translateX(-200%);
 }
 
 .carousel-card img {
-    width: 100%; /* Ajusta el ancho al 100% de la tarjeta */
-    height: 400px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Asegura que la imagen se ajuste de manera estética */
-  }
-  
+  width: 100%; /* Ajusta el ancho al 100% de la tarjeta */
+  height: 400px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen se ajuste de manera estética */
+}
