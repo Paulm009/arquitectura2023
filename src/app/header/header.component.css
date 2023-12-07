@@ -14,33 +14,41 @@
     align-items: center;
     padding: 20px 100px;
     z-index: 99;
-    background: transparent;
+    background: transparent; /* Puedes cambiar a 'white' si necesitas fondo blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px; /* Espacio entre elementos de navegación */
 }
 
 .header .nav a {
     text-decoration: none;
     color: #000000;
     font-size: 20px;
-    margin-left: 20px;
     font-weight: 600;
+    transition: color 0.3s, border-bottom 0.5s; /* Transición suave */
 }
 
 .header .nav a:hover {
-    border-bottom: 4px solid #ffcc00;;
-    transition: .5s;
-    color:#ffcc00;
+    border-bottom: 4px solid #ffcc00;
+    color: #ffcc00;
+}
+
+.search .logo img {
+    width: 40px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
 }
 
 .search a {
-    color: #fff;
+    color: #000000; /* Ajusta si el fondo es claro */
     font-size: 1.5em;
-    margin-left: 20px;
 }
 
 /* Media queries para dispositivos más pequeños */
 @media (max-width: 768px) {
     .header {
-        /* Tu código existente... */
         flex-direction: column;
         align-items: center;
     }

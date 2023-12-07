@@ -21,12 +21,12 @@ export class LoginHomepageComponent implements OnInit {
   
   @ViewChild('cardsContainer') cardsContainer: ElementRef;
   cards = [
-    {  url: 'https://example1.com', content: 'holasi', image: '/assets/sliderimagens/ima1.jpg' },
-    {   content: 'Content 1', image: '/assets/sliderimagens/ima1.jpg' },
-    {   content: 'Content 1', image: '/assets/sliderimagens/ima2.jpg' },
-    {  content: 'Content 1', image: '/assets/sliderimagens/ima3.jpg' },
-    {   content: 'Content 1', image: '/assets/sliderimagens/ima4.jpg' },
-    { title: 'Card 1', subtitle: 'Subtitle 1', content: 'Content 1', image: '/assets/sliderimagens/ima5.jpg' },
+    {  url: 'https://example1.com', content: 'Plantas Aromaticas', image: '/assets/sliderimagens/ima1.jpg' },
+    {   url: 'https://example1.com',content: 'Plantas Frutales', image: '/assets/sliderimagens/ima1.jpg' },
+    {   url: 'https://example1.com',content: 'Plantas Ornamentales', image: '/assets/sliderimagens/ima2.jpg' },
+    { url: 'https://example1.com', content: 'Plantas Medicianles', image: '/assets/sliderimagens/ima3.jpg' },
+    {   url: 'https://example1.com',content: 'Plantas Trepadoras', image: '/assets/sliderimagens/ima4.jpg' },
+    { url: 'https://example1.com',title: '', subtitle: '', content: 'Plantas insectívoras', image: '/assets/sliderimagens/ima5.jpg' },
    
     // ... Añade más tarjetas según sea necesario
   ];
