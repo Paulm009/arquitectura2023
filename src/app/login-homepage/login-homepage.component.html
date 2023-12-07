@@ -1,0 +1,66 @@
+<app-header></app-header>
+<br><br><br><br><br>
+<app-login-contenedor>
+ 
+
+
+
+    <div class="carousel">
+      <input type="radio" name="slides" id="slide1" checked>
+      <input type="radio" name="slides" id="slide2">
+      <input type="radio" name="slides" id="slide3">
+    
+      <div class="slides">
+          <div class="slide" id="s1">
+              <img src="/assets/sliderimagens/ima1.jpg" alt="Image 1">
+          </div>
+          <div class="slide" id="s2">
+              <img src="/assets/sliderimagens/ima2.jpg" alt="Image 2">
+          </div>
+          <div class="slide" id="s3">
+              <img src="/assets/sliderimagens/ima3.jpg" alt="Image 3">
+          </div>
+      </div>
+    
+      <div class="navigation">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+      </div>
+    </div>
+    <br><br><br><br><br>
+    
+    
+    
+    
+    
+    
+    
+      <div class="login-homepage-carousel">
+        <!-- Botón Izquierdo -->
+        <button (click)="scrollLeft()" class="scroll-button left">&lt;</button>
+      
+        <!-- Contenedor de las Tarjetas -->
+        <div class="cards-container" #cardsContainer>
+          <mat-card class="carousel-card" *ngFor="let card of cards">
+            <mat-card-header>
+              <mat-card-title>{{ card.title }}</mat-card-title>
+              <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="card.image" alt="Card image">
+            
+              <p>{{ card.content }}</p>
+          </mat-card>
+        </div>
+      
+        <!-- Botón Derecho -->
+        <button (click)="scrollRight()" class="scroll-button right">&gt;</button>
+      </div>
+      
+    
+    
+    
+    </app-login-contenedor>
+    
+  <br><br>
+<app-footer></app-footer>

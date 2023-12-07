@@ -1,5 +1,5 @@
 .site-footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
     background-image: url('../../assets/footerImage/textura2.jpg'); /* Reemplaza con la ruta de tu imagen */
@@ -86,3 +86,4 @@
         margin-top: 10px; /* Agregar un pequeño margen superior */
     }
 }
+
