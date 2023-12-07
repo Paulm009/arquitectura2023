@@ -1,0 +1,92 @@
+.image-grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 100px;
+    padding-bottom: 150px;
+    z-index: 2;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  
+  .background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../../assets/sliderimagens/extraImage.jpg');
+    background-size: cover 100%;
+    filter: blur(5px); 
+    z-index: 1;
+    
+  }
+  
+  .image-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+  }
+
+  .image-wrapper {
+    position: relative;
+  }
+  
+  .image-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo negro casi transparente */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
+  }
+  
+  .image-wrapper:hover::before {
+    opacity: 1; /* Al pasar el cursor, se vuelve visible */
+  }
+  
+  .image-wrapper p {
+    position: absolute;
+    bottom: 25%; /* Ajusta la posición vertical del título */
+    left: 50%;
+    transform: translate(-50%, 50%); /* Centra el título horizontalmente y ajusta su posición vertical */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
+  }
+  
+  .image-wrapper:hover p {
+    opacity: 1; /* Al pasar el cursor, se vuelve visible */
+  }
+  
+  .image-item img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    /* Otros estilos de imagen */
+  }
+  
+app-header {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+app-footer {
+  position: absolute;
+  z-index: 4;
+}

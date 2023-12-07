@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { CarruselComponent } from './carrusel/carrusel.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { InformacionComponent } from './informacion/informacion.component';
+import { DonacionComponent } from './donacion/donacion.component';
+import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
+import { BibliotecaVideosComponent } from './biblioteca-videos/biblioteca-videos.component';
+import { LoginComponent } from './login/login.component';
+import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
 registerLocaleData(en);
 
 
@@ -23,6 +32,14 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     CarruselComponent,
+    FooterComponent,
+    HeaderComponent,
+    InformacionComponent,
+    DonacionComponent,
+    ListaPlantasComponent,
+    BibliotecaVideosComponent,
+    LoginComponent,
+    ListaCategoriasComponent,
     
     
    
@@ -36,7 +53,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzCarouselModule,
-    NzCardModule
+    NzCardModule,
+    ReactiveFormsModule
    
   ],
   providers: [

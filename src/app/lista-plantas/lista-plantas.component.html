@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="background"></div>
+<div class="image-grid">
+  <div class="image-item" *ngFor="let image of images">
+    <div class="image-wrapper">
+      <img [src]="image.url" [alt]="image.title" [title]="image.title">
+      <p>{{ image.title }}</p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
