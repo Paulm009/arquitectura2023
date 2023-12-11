@@ -19,7 +19,7 @@ export class LoginHomepageComponent implements OnInit {
   }
   
   
-  @ViewChild('cardsContainer') cardsContainer!: ElementRef;
+  @ViewChild('cardsContainer') cardsContainer: ElementRef;
   cards = [
     {  url: 'https://example1.com', content: 'Plantas Aromaticas', image: '/assets/sliderimagens/ima1.jpg' },
     {   url: 'https://example1.com',content: 'Plantas Frutales', image: '/assets/sliderimagens/ima1.jpg' },
