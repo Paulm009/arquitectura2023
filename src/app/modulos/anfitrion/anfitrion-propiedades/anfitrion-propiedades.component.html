@@ -1,0 +1,31 @@
+<app-contenedor>
+  <br>
+  <br>
+  <br>
+  <app-cabecera titulo="¡Te damos la bienvenida!"></app-cabecera>
+  <app-cuerpo>
+    <mat-toolbar class="sub-cabecera">
+      <div>
+        <span class="hidden-sm">Lista de categorias de plantas:</span>
+      </div>
+      <span class="example-spacer"></span>
+      <button mat-raised-button class="green-button" routerLink="./registro-propiedad">
+        <mat-icon>eco</mat-icon>
+        Añadir Categoria
+      </button>
+    </mat-toolbar>
+    <section class="grid-container">
+      <div *ngFor="let categoria of categoria" class="grid-item">
+        <a style="text-decoration: none;" routerLink="/anfitrion/ver-plantas" [queryParams]="{categoriaId: categoria.id}">
+          <mat-card class="example-card">
+            <img mat-card-image [src]="base_backend_url+categoria.img" alt="Photo of a Shiba Inu" class="card-image">
+            <mat-card-content>
+              <mat-card-title>{{categoria.name}}</mat-card-title>
+              <p>{{categoria.description}}</p>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </div>
+    </section>
+  </app-cuerpo>
+</app-contenedor>

@@ -1,0 +1,29 @@
+<app-login-contenedor>
+    <div class="cont">
+      <mat-card class="login">
+        <h2>Inicio de Sesión</h2>
+        <span class="material-icons user-icon" style="font-size: 100px; margin-bottom: 15px ">account_circle</span>
+          <form [formGroup]="formulario" (ngSubmit)="login()">
+            <div>
+              <mat-form-field [appearance]="apariencia">
+                <mat-label>Ingrese su correo</mat-label>
+                <input required matInput formControlName="email" placeholder="@gmail.com" name="Ingrese su correo electrónico">
+              </mat-form-field>
+              <mat-form-field [appearance]="apariencia">
+                <mat-label>Contraseña</mat-label>
+                <input required matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="*****" name="Contraseña">
+                <button tabindex="-1" type="button" mat-icon-button matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+  
+            <div>
+              <button mat-flat-button class="green-button" type="submit" >Ingresar</button>
+            </div>
+  
+          </form>
+      </mat-card>
+    </div>
+  </app-login-contenedor>

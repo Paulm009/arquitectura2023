@@ -1,0 +1,9 @@
+<div class="background-color">
+  <div class="ocultar" *ngIf="!visible">
+  </div>
+  <ng-container *ngIf="visible">
+    <div class="content-card">
+      <ng-content></ng-content>
+    </div>
+  </ng-container>
+</div>

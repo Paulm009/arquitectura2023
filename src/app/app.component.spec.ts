@@ -1,34 +1,35 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [RouterTestingModule] // Importar RouterTestingModule para las pruebas con <router-outlet>
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [
+        AppComponent
+      ],
     }).compileComponents();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
-    component = fixture.componentInstance;
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it(`should have as title 'titsfront'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('titsfront');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-  });
-
-  it('debería crear la aplicación', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it(`debería tener como título 'arquitectura2023'`, () => {
-    expect(component.title).toEqual('arquitectura2023');
-  });
-
-  it('debería representar el router-outlet', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+    expect(compiled.querySelector('.content span')?.textContent).toContain('titsfront app is running!');
   });
 });

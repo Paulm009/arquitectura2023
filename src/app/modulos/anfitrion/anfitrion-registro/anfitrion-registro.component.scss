@@ -1,0 +1,63 @@
+.form-property {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.card-content {
+  display: flex;
+}
+
+.image-preview-container {
+  margin-left: 20px; /* Ajusta el margen según tus necesidades */
+}
+
+.placeholder {
+  height: 100px; /* Altura de tu espacio en blanco */
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-inputs-container {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.green-button {
+  background-color: rgb(62, 147, 62);
+  color: white; /* Texto en color blanco para mejor contraste */
+  width: 200px;
+  height: auto;
+}
+.input{
+  width: 100%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.image-preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea la imagen a la derecha */
+  margin-top: 20px;
+}
+.preview-image {
+  max-width: 100%; /* La imagen se ajustará al ancho máximo del contenedor */
+  max-height: 200px; /* Establece la altura máxima según tus necesidades */
+  object-fit: contain; /* La imagen se ajustará dentro del contenedor manteniendo su relación de aspecto */
+}
+.mat-card{
+  width: 532px;
+  height: 280px;
+}
+.button-container{
+  display: flex;
+  justify-content: space-around !important;
+}

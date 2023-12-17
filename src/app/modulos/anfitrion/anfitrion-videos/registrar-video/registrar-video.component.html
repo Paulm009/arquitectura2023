@@ -1,0 +1,23 @@
+<app-contenedor>
+    <app-cabecera></app-cabecera>
+    <!--iframe width="560" height="315" src="https://www.youtube.com/embed/2gFdGx0wllA?si=1I9sukR_rzlyCBx5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+    <app-cuerpo class="form-property">
+      <div class="card-container">
+        <mat-card class="login">
+          <h1 style="text-align: center;">Añadir un nuevo video</h1>
+          <form [formGroup]="formRegistro" class="form-registro">
+            <p>Añadir iframe del video</p>
+            <mat-form-field style="width: 100%;">
+              <textarea matInput formControlName="iframeCode"></textarea>
+            </mat-form-field>
+            <div class="center-container">
+              <div class="button-container">
+                <button mat-raised-button class="green-button" (click)="guardarDatos()" [disabled]="!formRegistro.valid">Registrar</button>
+              </div>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </app-cuerpo>
+  </app-contenedor>
+  

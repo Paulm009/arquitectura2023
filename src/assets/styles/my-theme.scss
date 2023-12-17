@@ -1,0 +1,54 @@
+@import "~@angular/material/core/theming";
+//@import "../node_modules/@angular/material/theming";
+@include mat-core();
+
+//gama colores
+$my-primary:(
+  50 : #f3fafb,
+  100 : #e2f2f5,
+  200 : #cee9ef,
+  300 : #bae0e9,
+  400 : #acdae4,
+  500 : #9dd3df,
+  600 : #95cedb,
+  700 : #8bc8d7,
+  800 : #81c2d2,
+  900 : #6fb7ca,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #def8ff,
+  A700 : #c4f3ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$my-theme: _mat-create-light-color-config($my-primary);
+@include angular-material-theme($my-theme);
+
+//paleta de colores
+//$my-primary-color: mat-light-theme($my-primary);
+
+////tema propio
+//$my-theme: mat-light-theme(
+//    (
+//      color: (
+//        primary: $my-primary-color,
+//      )
+//    )
+//);
+//aplicar nuestro tema a angular
+//@include angular-material-theme($my-primary-color)

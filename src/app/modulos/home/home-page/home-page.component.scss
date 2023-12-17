@@ -1,0 +1,62 @@
+// footer.scss
+
+.jardin-botanico-title {
+  font-family: 'Georgia', serif; // Cambia la fuente según tus preferencias
+  font-size: 36px;
+  color: #2ecc71; // Un color verde para representar la naturaleza
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 2px; // Espaciado entre letras
+} 
+
+.jardin-botanico-subtitle {
+  font-size: 28px;
+  color: #34495e; // Un tono de gris oscuro
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+}
+
+.carousel-card img {
+  width: 110%; /* Establece el ancho al 100% del contenedor */
+  height: auto; /* Ajusta automáticamente la altura según el ancho */
+  max-height: 200px; /* Establece una altura máxima si lo deseas */
+}
+.carousel-card {
+  flex: 0 0 auto; /* Establece el ancho de las tarjetas como automático */
+  width: 250px; /* Ajusta el ancho deseado de cada card */
+  margin-right: 16px; /* Ajusta el margen entre las cards */
+}
+.carousel-container,
+.login-homepage-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.carousel-items {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+.scroll-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Estilos específicos para el carrusel de cards */
+
