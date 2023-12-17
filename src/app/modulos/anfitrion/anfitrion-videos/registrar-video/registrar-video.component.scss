@@ -1,0 +1,16 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // O ajusta según sea necesario
+  }
+  
+  .form-registro {
+    width: 300px; // O ajusta según sea necesario
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  .green-button {
+    background-color: rgb(62, 147, 62);
+    color: white; /* Texto en color blanco para mejor contraste */
+  }

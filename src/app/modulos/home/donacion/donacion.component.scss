@@ -1,0 +1,46 @@
+// home.component.scss
+
+.home {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-hojas-tropicales-planas_23-2148979902.jpg?w=1060&t=st=1702751986~exp=1702752586~hmac=2de3e0f312fd19697d38b8b97890cec2d0dd4b4e6128e8f1aa0600bbe381aa90');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; // Ajusta la altura según tus necesidades
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-card {
+    max-width: 900px; // Ajusta el ancho máximo según tus necesidades
+    //max-height: 1000px;
+    margin: 0 auto; // Centrar el card
+    display: flex; // Permitir que los elementos dentro del card se distribuyan horizontalmente
+  }
+  
+  .image-container {
+    flex: 1; // Ocupar todo el espacio disponible
+    padding: 26px;
+    box-sizing: border-box; // Evitar que el padding afecte el ancho total
+  }
+  
+  .text-container {
+    flex: 1; // Ocupar todo el espacio disponible
+    padding: 16px;
+    box-sizing: border-box; // Evitar que el padding afecte el ancho total
+  }
+  
+  .dedicatoria p {
+    margin-bottom: 0;
+    padding: 30px;
+    font-size: large;
+    //sfont-family: monospace;
+  }
+  
+  img {
+    max-width: 100%; // Ajustar el tamaño máximo de la imagen al ancho del contenedor
+    height: auto; // Mantener la proporción original de la imagen
+  }
+  
+  

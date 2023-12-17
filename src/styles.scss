@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//fonts adicionales
+@font-face {
+  font-family: 'Amaranth';
+  src: url('./assets/font/Amaranth/Amaranth-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('./assets/font/Helvetica/Helvetica.ttf') format('truetype');
+}
+
+//colores
+
+.primary{
+  background-color: #9dd3df !important;
+  color: black !important;
+}
+.secundary{
+  background-color: white !important;
+  color: black;
+}
+.sub-cabecera{
+  background-color: #fcfeff;
+}
+
+//estilos textos
+.text-Botanico {
+  margin-left: 5px;
+  font-size: 30px;
+  font-family: Amaranth;
+}
+
+//estilos
+.title_logo{
+  max-height: 45px;
+}
+.contenedor-titulo{
+  text-align: center;
+  flex: 1;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,50 @@
+<app-login-contenedor>
+  <div style="text-align: center; margin-bottom: 25px;">
+    <br>
+    <div class="jardin-botanico-title">J<span class="jardin-botanico-subtitle">ardín Botánico</span></div>
+
+    <!-- Estilo del primer slider para ocupar toda la pantalla a lo ancho -->
+    <div class="carousel-container" style="width: 100vw ; max-height: 400px; overflow: hidden;">
+      <button mat-icon-button (click)="prevSlide()">
+        <mat-icon></mat-icon>
+      </button>
+
+      <div class="carousel-items" style="width: 100vw ; display: flex; transition: transform 0.5s;">
+        <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" (click)="updateSlide(i)" [hidden]="i !== currentIndex" style="width: 100vw;">
+          <img [src]="image" alt="Carousel Image" style="width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <button mat-icon-button (click)="nextSlide()">
+        <mat-icon></mat-icon>
+      </button>
+    </div>
+
+    <!-- Resto del contenido -->
+    <div class="login-homepage-carousel">
+      <button (click)="scrollLeft()" class="scroll-button left">&lt;</button>
+      <div class="cards-container" #cardsContainer>
+        <mat-card class="carousel-card" *ngFor="let card of cards">
+          <mat-card-header>
+            <mat-card-title>{{ card.title }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="card.image" alt="Card image">
+          <p>{{ card.content }}</p>
+        </mat-card>
+      </div>
+
+      <button (click)="scrollRight()" class="scroll-button right">&gt;</button>
+    </div>
+  </div>
+  <footer style="text-align: center; background-color: #266c18; color: #fff; padding: 15px;">
+    <!-- Iconos de Angular Material -->
+    <mat-icon>mail</mat-icon>
+    <p>Email: infoexample.com</p>
+
+    <mat-icon>phone</mat-icon>
+    <p>Teléfono: (123) 456-7890</p>
+
+    <mat-icon>location_on</mat-icon>
+    <p>Dirección: 123 Calle Principal, Ciudad</p>
+  </footer>
+</app-login-contenedor>

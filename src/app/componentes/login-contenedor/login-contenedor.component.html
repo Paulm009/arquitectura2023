@@ -1,0 +1,22 @@
+<div>
+  <mat-toolbar style="background: #229b48; color: rgb(242, 242, 242); position: fixed; top: 0; width: 100%; z-index: 1000;display: flex;justify-content: space-between;">
+    <div>
+    <span class="text-Botanico">JardinBotanico</span>
+    <button mat-button routerLink="/home-page">Inicio</button>
+    <button mat-button routerLink="/home-page/listaCategoria">Categorias</button>
+    <button mat-button routerLink="/home-page/plantas">Plantas</button>
+    <button mat-button routerLink="/home-page/videos" >Videos</button>
+    <button mat-button routerLink="/home-page/donacion">Donacion</button>
+    <span class="spacer"></span>
+  </div>
+    <div>
+      <button mat-button routerLink="/home-page/login">
+        <mat-icon class="derecha ">account_box</mat-icon>
+        Admin
+      </button>
+    </div>
+  </mat-toolbar>
+  <div class="cuerpo" style="margin-top: 64px;">
+    <ng-content></ng-content>
+  </div>
+</div>

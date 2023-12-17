@@ -1,0 +1,21 @@
+<mat-toolbar style="background: #229b48; color: rgb(242, 242, 242); position: fixed; top: 0; width: 100%; z-index: 1000;" >
+  <span class="text-Botanico" routerLink="/anfitrion">Jardin Botanico</span>
+  <span class="example-spacer"></span>
+  <div>
+    <button mat-icon-button routerLink="./videos">
+      <mat-icon>video_library</mat-icon>
+    </button>
+    <span>Administracion</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">
+    Cerrar Sesión
+    <mat-icon style="margin-left: 16px;">logout</mat-icon>
+  </button>
+</mat-menu>
+
+

@@ -1,0 +1,16 @@
+<app-login-contenedor>
+    <app-cabecera titulo="Plantas"></app-cabecera>
+    <app-cuerpo>
+      <section class="grid-container">
+        <div *ngFor="let planta of plantas" class="grid-item">
+            <mat-card class="example-card">
+              <img mat-card-image [src]="base_backend_url+planta.img" alt="Photo of a Shiba Inu" class="card-image">
+              <mat-card-content>
+                <mat-card-title>{{planta.name}}</mat-card-title>
+                <p>{{planta.description}}</p>
+              </mat-card-content>
+            </mat-card>
+        </div>
+      </section>
+    </app-cuerpo>
+  </app-login-contenedor>

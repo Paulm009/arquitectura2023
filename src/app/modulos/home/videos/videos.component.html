@@ -1,0 +1,17 @@
+<app-login-contenedor>
+    <app-cuerpo>
+        <mat-toolbar class="sub-cabecera">
+          <div>
+            <span class="hidden-sm">Lista de videos:</span>
+          </div>
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+        <mat-grid-list cols="3" rowHeight="3:2">
+          <mat-grid-tile *ngFor="let video of videos">
+              <iframe width="100%" height="100%" style="margin: 10px;padding: 5px;" [src]="video.iframe_code" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+          </mat-grid-tile>
+        </mat-grid-list>
+  
+      </app-cuerpo>
+</app-login-contenedor>

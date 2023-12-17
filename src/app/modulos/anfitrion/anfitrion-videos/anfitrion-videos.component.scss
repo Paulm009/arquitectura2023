@@ -1,0 +1,55 @@
+.sub-cabecera{
+  background-color: #fcfeff;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flex-item {
+  flex: 0 0 calc(33.3333% - 16px);
+  margin-bottom: 16px;
+}
+.flex-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+
+/* En tu archivo de estilos CSS o en línea en tu componente */
+.grid-container {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.3333% - 16px), 1fr));
+  grid-gap: 16px;
+}
+
+.grid-item {
+  margin-bottom: 16px;
+}
+
+
+.botonsetting{
+  margin-left: 100px;
+  margin-left: 20px;
+  width: 30px;
+}
+.contenedor-botonsetting {
+  position: relative;
+  display: inline-block;
+}
+
+.icono-settings {
+  position: absolute;
+  top: 50%;
+  left: 8px; /* Ajusta el valor según sea necesario */
+  transform: translateY(-50%);
+}
+.green-button {
+  background-color: rgb(62, 147, 62);
+  color: white; /* Texto en color blanco para mejor contraste */
+}
+.card-image {
+  width: 105%;
+  height: 300px; /* Establece la altura deseada para todas las imágenes */
+  object-fit: cover; /* Esto recortará o redimensionará la imagen para ajustarla al contenedor manteniendo la proporción */
+}

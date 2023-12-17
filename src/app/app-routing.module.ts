@@ -1,29 +1,32 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarruselComponent } from './carrusel/carrusel.component';
-import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
-import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
-import { DonacionComponent } from './donacion/donacion.component';
-import { LoginHomepageComponent } from './login-homepage/login-homepage.component';
-
+import {AnfitrionModule} from "./modulos/anfitrion/anfitrion.module";
+import {AuthActiveGuard} from "./guard/auth-active.guard";
+import {AdminGuard} from "./guard/admin.guard";
+import {EstructuraComponent} from "./componentes/estructura/estructura.component";
 const routes: Routes = [
-  { path: "", component: LoginHomepageComponent },
-
-  { path: "carrusel", component: CarruselComponent },
-  { path: "login", component: LoginComponent },
-  { path: "header", component: HeaderComponent },
-  { path: "footer", component: FooterComponent },
-  { path: "listaCategoria", component: ListaCategoriasComponent },
-  { path: "listaPlanta", component: ListaPlantasComponent },
-  { path: "donacion", component: DonacionComponent },
   
-
-
-
-
+  { 
+    path: '', 
+    redirectTo: 'home-page', 
+    pathMatch: 'full'
+  },
+  {
+    path: 'home-page',
+    loadChildren: () => import('./modulos/home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'anfitrion',
+    canActivate: [AuthActiveGuard,AdminGuard],
+    component: EstructuraComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modulos/anfitrion/anfitrion.module').then(m => m.AnfitrionModule),
+      }
+    ]
+  },
+  
 ];
 
 @NgModule({
